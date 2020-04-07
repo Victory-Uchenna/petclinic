@@ -3,6 +3,7 @@ version: "3.7"
 services:
   front_end:
     image: josephigbi/petclinic-angular
+    container_name: front_end
     build: ./spring-petclinic-angular 
     ports:
     - target: 4200
@@ -10,9 +11,11 @@ services:
 
   back_end:
     image: springcommunity/spring-petclinic-rest
+    container_name: back_end
     ports:
     - target: 9966
       published: 9966
+
 
 
 
